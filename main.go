@@ -26,4 +26,8 @@ func main() {
 	fmt.Println("=== Materi Slice ===")
 	materi.UseSlice()
 	fmt.Println()
+
+	fmt.Println("=== Materi Map ===")
+	materi.UseMap()
+	fmt.Println()
 }
