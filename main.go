@@ -30,4 +30,12 @@ func main() {
 	fmt.Println("=== Materi Map ===")
 	materi.UseMap()
 	fmt.Println()
+
+	fmt.Println("=== Materi If Else ===")
+	materi.UsePercabangan()
+	fmt.Println()
+
+	fmt.Println("=== Materi For ===")
+	materi.UsePerulangan()
+	fmt.Println()
 }
