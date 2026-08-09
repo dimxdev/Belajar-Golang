@@ -13,5 +13,7 @@ func Pembagian(a int, b int) (int, error) {
 	return a / b, nil 
 }
 
-
+func GetUserInfo() (string, int, string, error) {
+	return "Dimas", 20, "Jepara", nil
+}
 

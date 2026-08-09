@@ -17,6 +17,8 @@ func main() {
 	resultAddNumbers := materi.AddNumbers(15, 80)
 	fmt.Println(resultAddNumbers)
 	fmt.Println(materi.Pembagian(10, 7))
+	name, age, address, err := materi.GetUserInfo()
+	fmt.Printf("name: %s\nage: %d\naddress: %s\nerror:%v", name, age, address, err)
 	fmt.Println()
 	
 	fmt.Println("=== Materi Struct ===")
@@ -38,4 +40,14 @@ func main() {
 	fmt.Println("=== Materi For ===")
 	materi.UsePerulangan()
 	fmt.Println()
+	
+	fmt.Println("=== Materi Error Handling ===")
+	materi.ErrorHandling1()
+	materi.ErrorHandling2()
+	materi.ErrorHandling3()
+	fmt.Println()
+
+	// fmt.Println("=== Materi For ===")
+	// materi.UsePerulangan()
+	// fmt.Println()
 }
