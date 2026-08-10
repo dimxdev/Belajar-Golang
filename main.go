@@ -47,7 +47,12 @@ func main() {
 	materi.ErrorHandling3()
 	fmt.Println()
 
-	// fmt.Println("=== Materi For ===")
-	// materi.UsePerulangan()
-	// fmt.Println()
+	fmt.Println("=== Materi Method ===")
+	materi.PrintSapa()
+	materi.PrintUbahNama()
+	fmt.Println()
+
+	fmt.Println("=== Materi Pointer ===")
+	materi.MainPointer()
+	fmt.Println()
 }
