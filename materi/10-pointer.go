@@ -21,11 +21,11 @@ func MainPointer() {
 	
 	
 	alamat := "Jepara"
-	alamatReal := &alamat
-	*alamatReal = "Bandung" // ubah value alamat lewat pointer
+	pAlamat := &alamat
+	*pAlamat = "Bandung" // ubah value alamat lewat pointer
 	
 	fmt.Println(alamat)
-	fmt.Println(*alamatReal)
+	fmt.Println(*pAlamat)
 	fmt.Println()
 	
 	

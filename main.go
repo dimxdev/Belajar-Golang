@@ -55,4 +55,8 @@ func main() {
 	fmt.Println("=== Materi Pointer ===")
 	materi.MainPointer()
 	fmt.Println()
+	
+	fmt.Println("=== Materi Pointer Di Function ===")
+	materi.MainUbahNilai()
+	fmt.Println()
 }
