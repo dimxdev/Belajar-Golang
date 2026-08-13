@@ -58,5 +58,12 @@ func main() {
 	
 	fmt.Println("=== Materi Pointer Di Function ===")
 	materi.MainUbahNilai()
+	materi.MainUbahNamaFood()
+	fmt.Println()
+
+	fmt.Println("=== Materi Pointer Di Struct ===")
+	materi.MainKucing()
+	materi.MainPekerja()
+	materi.MainAnjing()
 	fmt.Println()
 }
