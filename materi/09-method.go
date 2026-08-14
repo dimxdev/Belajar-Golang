@@ -27,3 +27,17 @@ func PrintUbahNama() {
 	employe1.UbahNama("Dimas Brotowali H")
 	fmt.Println(employe1)
 }
+
+
+type Age int 
+
+func (a Age) isAdult() bool {
+	return a >= 20
+}
+
+func MainAge() {
+	age := Age(17)
+	ageIsAdult := age.isAdult()
+
+	fmt.Println(ageIsAdult)
+}

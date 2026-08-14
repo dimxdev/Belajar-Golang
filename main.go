@@ -50,6 +50,7 @@ func main() {
 	fmt.Println("=== Materi Method ===")
 	materi.PrintSapa()
 	materi.PrintUbahNama()
+	materi.MainAge()
 	fmt.Println()
 
 	fmt.Println("=== Materi Pointer ===")
@@ -65,5 +66,9 @@ func main() {
 	materi.MainKucing()
 	materi.MainPekerja()
 	materi.MainAnjing()
+	fmt.Println()
+
+	fmt.Println("=== Materi Pointer Di Method ===")
+	materi.MainMahasiswa()
 	fmt.Println()
 }
