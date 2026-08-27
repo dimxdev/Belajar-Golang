@@ -71,4 +71,10 @@ func main() {
 	fmt.Println("=== Materi Pointer Di Method ===")
 	materi.MainMahasiswa()
 	fmt.Println()
+
+	fmt.Println("=== Materi Goroutine Di Method ===")
+	materi.MainSapa()
+	materi.MainMasak()
+	materi.MainHitungKuadrat()
+	fmt.Println()
 }
