@@ -65,6 +65,18 @@ func MainHitungKuadrat() {
 	for i := 0; i < len(angka2); i++ {
 		fmt.Println(<-hasil2)
 	}
-
 }
+
+// latihan
+func KirimPesan(pesan chan string) {
+	pesan <- "hello dari goroutine"
+}
+
+func MainKirimPesan() {
+	pesan := make(chan string)
+	go KirimPesan(pesan)
+
+	fmt.Println(<-pesan)
+}
+
 

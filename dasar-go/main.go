@@ -76,5 +76,6 @@ func main() {
 	materi.MainSapa()
 	materi.MainMasak()
 	materi.MainHitungKuadrat()
+	materi.MainKirimPesan()
 	fmt.Println()
 }
