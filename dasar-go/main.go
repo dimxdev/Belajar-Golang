@@ -19,7 +19,7 @@ func main() {
 	fmt.Println(materi.Pembagian(10, 7))
 	name, age, address, err := materi.GetUserInfo()
 	fmt.Printf("name: %s\nage: %d\naddress: %s\nerror:%v", name, age, address, err)
-	fmt.Println()
+	fmt.Println() 
 	
 	fmt.Println("=== Materi Struct ===")
 	materi.UseStruct()
