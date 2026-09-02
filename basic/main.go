@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Belajar-Go/materi"
+	"Belajar-Go/src"
 	"fmt"
 )
 
@@ -10,72 +10,72 @@ func main() {
 	fmt.Println()
 	
 	fmt.Println("=== Materi Variabel Tipedata ===")
-	materi.VariabelTipedata()
+	src.VariabelTipedata()
 	fmt.Println()
 	
 	fmt.Println("=== Materi Function ===")
-	resultAddNumbers := materi.AddNumbers(15, 80)
+	resultAddNumbers := src.AddNumbers(15, 80)
 	fmt.Println(resultAddNumbers)
-	fmt.Println(materi.Pembagian(10, 7))
-	name, age, address, err := materi.GetUserInfo()
+	fmt.Println(src.Pembagian(10, 7))
+	name, age, address, err := src.GetUserInfo()
 	fmt.Printf("name: %s\nage: %d\naddress: %s\nerror:%v", name, age, address, err)
 	fmt.Println() 
 	
 	fmt.Println("=== Materi Struct ===")
-	materi.UseStruct()
+	src.UseStruct()
 	fmt.Println()
 	
 	fmt.Println("=== Materi Slice ===")
-	materi.UseSlice()
+	src.UseSlice()
 	fmt.Println()
 
 	fmt.Println("=== Materi Map ===")
-	materi.UseMap()
+	src.UseMap()
 	fmt.Println()
 
 	fmt.Println("=== Materi If Else ===")
-	materi.UsePercabangan()
+	src.UsePercabangan()
 	fmt.Println()
 
 	fmt.Println("=== Materi For ===")
-	materi.UsePerulangan()
+	src.UsePerulangan()
 	fmt.Println()
 	
 	fmt.Println("=== Materi Error Handling ===")
-	materi.ErrorHandling1()
-	materi.ErrorHandling2()
-	materi.ErrorHandling3()
+	src.ErrorHandling1()
+	src.ErrorHandling2()
+	src.ErrorHandling3()
 	fmt.Println()
 
 	fmt.Println("=== Materi Method ===")
-	materi.PrintSapa()
-	materi.PrintUbahNama()
-	materi.MainAge()
+	src.PrintSapa()
+	src.PrintUbahNama()
+	src.MainAge()
 	fmt.Println()
 
 	fmt.Println("=== Materi Pointer ===")
-	materi.MainPointer()
+	src.MainPointer()
 	fmt.Println()
 	
 	fmt.Println("=== Materi Pointer Di Function ===")
-	materi.MainUbahNilai()
-	materi.MainUbahNamaFood()
+	src.MainUbahNilai()
+	src.MainUbahNamaFood()
 	fmt.Println()
 
 	fmt.Println("=== Materi Pointer Di Struct ===")
-	materi.MainKucing()
-	materi.MainPekerja()
-	materi.MainAnjing()
+	src.MainKucing()
+	src.MainPekerja()
+	src.MainAnjing()
 	fmt.Println()
 
 	fmt.Println("=== Materi Pointer Di Method ===")
-	materi.MainMahasiswa()
+	src.MainMahasiswa()
 	fmt.Println()
 
 	fmt.Println("=== Materi Goroutine Di Method ===")
-	materi.MainSapa()
-	materi.MainMasak()
-	materi.MainHitungKuadrat()
-	materi.MainKirimPesan()
+	src.MainSapa()
+	src.MainMasak()
+	src.MainHitungKuadrat()
+	src.MainKirimPesan()
 	fmt.Println()
 }
