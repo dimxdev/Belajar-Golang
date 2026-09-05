@@ -26,3 +26,12 @@ func GetQuery(c *gin.Context) {
 		"status": "succes",
 	})
 }
+
+func GetId(c *gin.Context) {
+	id := c.Param("id")
+
+	c.JSON(200, gin.H{
+		"status": "succes",
+		"id": id,
+	})
+}

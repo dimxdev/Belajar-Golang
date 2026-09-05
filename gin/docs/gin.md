@@ -45,4 +45,4 @@ func main() {
 
 - Gin **tidak** menggantikan konsep-konsep dasar HTTP yang udah kamu pelajari di `net/http` — semua tetap sama (method, status code, header, JSON encode/decode). Gin cuma nyingkat cara nulisnya.
 - Karena itu, urutan belajar `net/http` dulu baru Gin itu **tepat** — kamu udah paham "apa yang sebenarnya terjadi" di balik tiap shortcut Gin.
-- Referensi lanjut: [GET.md](GET.md), [POST.md](POST.md), [gin-context.md](gin-context.md).
+- Referensi lanjut: [get.md](get.md), [post.md](post.md), [gin-context.md](gin-context.md).

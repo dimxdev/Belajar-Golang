@@ -72,7 +72,7 @@ func createUserHandler(c *gin.Context) {
 	c.JSON(201, gin.H{"status": "success", "data": user})
 }
 ```
-Pola ini identik dengan pola `Decode` + validasi berlapis yang dibahas di [POST.md net/docs](../../net/docs/POST.md), cuma versi Gin lebih ringkes.
+Pola ini identik dengan pola `Decode` + validasi berlapis yang dibahas di [post.md net/docs](../../net/docs/post.md), cuma versi Gin lebih ringkes.
 
 ## Poin Penting
 
