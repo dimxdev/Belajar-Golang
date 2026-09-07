@@ -13,9 +13,10 @@ func handler(c *gin.Context) {
 
 func main() {
 	router := gin.Default()
+	router.Use(materi.LoggerMiddleware) //pakai middleware di semua route
 
 	router.GET("/", handler)
-	router.GET("/profile", materi.ProfilHandler)
+	router.GET("/profile",materi.SimpleMiddleware, materi.ProfilHandler)
 	router.GET("/search", materi.GetQuery)
 	router.GET("/user/:id", materi.GetId)
 
