@@ -1,6 +1,6 @@
 # 📥 GET di Gin
 
-Sama seperti [GET.md net/docs](../../net/docs/GET.md): method `GET` dipakai buat **mengambil data**, tanpa body request. Data tambahan lewat query parameter atau path parameter.
+Sama seperti [get.md net/docs](../../net/docs/02-get.md): method `GET` dipakai buat **mengambil data**, tanpa body request. Data tambahan lewat query parameter atau path parameter.
 
 ## Contoh Paling Dasar
 

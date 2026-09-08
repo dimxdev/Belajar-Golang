@@ -89,6 +89,60 @@ type Profil struct {
 }
 ```
 
+## Field Struct Bisa Bertipe Apa Aja
+
+Field struct nggak dibatasin cuma tipe dasar (`string`, `int`, `bool`) — bisa diisi tipe data **apapun** yang valid di Go, disesuaikan sama bentuk data yang mau ditampung.
+
+**Slice** — kalau field itu perlu nampung banyak nilai sekaligus:
+```go
+type Config struct {
+	AllowOrigins []string // banyak domain sekaligus
+	Produk       []Barang // slice of struct lain
+}
+```
+
+**Map** — buat data key-value:
+```go
+type Settings struct {
+	Preferensi map[string]string
+}
+```
+
+**Pointer** — buat "opsional"/referensi ke variabel lain:
+```go
+type Anjing struct {
+	Name string
+	Age  *int // pointer ke int
+}
+```
+
+**Function** — jarang, tapi valid, misal buat callback:
+```go
+type Validator struct {
+	CekValid func(int) bool
+}
+```
+
+**Channel** — biasa dipakai di sistem concurrency:
+```go
+type Worker struct {
+	Selesai chan bool
+}
+```
+
+Contoh gabungan semua tipe sekaligus dalam 1 struct:
+```go
+type Server struct {
+	Nama    string            // tipe dasar
+	Domains []string          // slice
+	Headers map[string]string // map
+	Alamat  Alamat            // struct lain (nested)
+	Owner   *User             // pointer
+}
+```
+
+Ini yang bikin struct di Go fleksibel — desain field-nya tinggal disesuaikan kebutuhan: butuh nampung banyak nilai → pakai slice, butuh key-value → pakai map, butuh referensi/opsional → pakai pointer, dst. Lihat lebih detail soal slice sebagai field di [04-slice.md](04-slice.md).
+
 ## Perbandingan Struct
 
 Struct bisa dibandingkan langsung pakai `==` **kalau** semua field-nya juga comparable (bukan slice/map/func):

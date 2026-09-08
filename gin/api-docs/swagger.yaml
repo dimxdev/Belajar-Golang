@@ -1,0 +1,30 @@
+basePath: /
+definitions:
+  materi.Profile:
+    properties:
+      age:
+        type: integer
+      name:
+        type: string
+    type: object
+host: localhost:8000
+info:
+  contact: {}
+  description: Ini API buat latihan Gin
+  title: Belajar Gin API
+  version: "1.0"
+paths:
+  /profile:
+    get:
+      description: Menampilkan data profil user (masih hardcode)
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/materi.Profile'
+      summary: Ambil data profile
+      tags:
+      - profile
+swagger: "2.0"

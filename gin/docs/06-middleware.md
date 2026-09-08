@@ -12,7 +12,7 @@ Contoh kasus umum yang dikerjain middleware: catat log tiap request, cek token l
 
 ## Middleware yang Udah Otomatis Aktif: `gin.Default()`
 
-Inget dari [gin.md](gin.md), `gin.Default()` udah otomatis pasang **2 middleware bawaan**:
+Inget dari [01-gin.md](01-gin.md), `gin.Default()` udah otomatis pasang **2 middleware bawaan**:
 
 ```go
 router := gin.Default()
@@ -363,4 +363,4 @@ func main() {
 - `router.Use(...)` pasang middleware **global**; taruh middleware sebagai argumen tambahan di `router.GET(path, middleware, handler)` buat middleware **per-route**; `group.Use(...)` buat middleware **per-group**.
 - CORS wajib diatur kalau frontend & backend kamu beda origin (domain/port beda) — tanpa ini, browser bakal blokir request dari frontend meskipun API-nya sebenarnya jalan normal.
 - Untuk CORS di project serius, lebih disarankan pakai `gin-contrib/cors` daripada nulis manual, biar nggak kelewatan edge case.
-- Referensi terkait: [gin.md](gin.md), [gin-context.md](gin-context.md).
+- Referensi terkait: [01-gin.md](01-gin.md), [02-gin-context.md](02-gin-context.md).

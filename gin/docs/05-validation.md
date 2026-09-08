@@ -214,4 +214,4 @@ Hasilnya jadi lebih ramah dibaca:
 - Tag `binding` cuma jalan lewat `ShouldBindJSON`/`ShouldBind`/`Bind` — bukan lewat `encoding/json` biasa.
 - Validasi generik (wajib isi, format, range angka) bisa dipindah ke tag struct; validasi **spesifik ke logika bisnis** (misal "stok tidak boleh melebihi kapasitas gudang") tetap harus dicek manual di handler.
 - Pesan error default berguna buat development, tapi sebaiknya di-custom kalau API-nya bakal dipakai user/frontend beneran.
-- Referensi terkait: [POST.md](POST.md), [gin-context.md](gin-context.md).
+- Referensi terkait: [04-post.md](04-post.md), [02-gin-context.md](02-gin-context.md).

@@ -1,6 +1,6 @@
 # 📤 POST di Gin
 
-Sama seperti [POST.md net/docs](../../net/docs/POST.md): method `POST` dipakai buat **mengirim/membuat data baru**, datanya ada di body request (biasanya JSON), perlu di-*bind* dulu jadi struct Go.
+Sama seperti [post.md net/docs](../../net/docs/03-post.md): method `POST` dipakai buat **mengirim/membuat data baru**, datanya ada di body request (biasanya JSON), perlu di-*bind* dulu jadi struct Go.
 
 ## Contoh Paling Dasar
 
@@ -80,4 +80,4 @@ Konsepnya identik, `ShouldBindJSON` cuma nambah bonus validasi lewat tag `bindin
 
 - Selalu cek `err != nil` setelah `ShouldBindJSON` — sama pentingnya dengan `Decode` di `net/http`, biar request dengan body invalid nggak lanjut diproses.
 - Tag `binding` di struct adalah keunggulan Gin buat validasi dasar (required, format, range angka) tanpa nulis `if` manual berulang-ulang.
-- Status code yang umum di endpoint `POST`: `201` (berhasil buat data baru), `400` (body/format invalid), `422` (format valid tapi gagal validasi bisnis) — lihat [status-code.md net/docs](../../net/docs/status-code.md).
+- Status code yang umum di endpoint `POST`: `201` (berhasil buat data baru), `400` (body/format invalid), `422` (format valid tapi gagal validasi bisnis) — lihat [status-code.md net/docs](../../net/docs/04-status-code.md).

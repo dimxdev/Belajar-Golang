@@ -88,7 +88,7 @@ func getProductHandler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-Lihat daftar lengkap status code di [status-code.md](status-code.md).
+Lihat daftar lengkap status code di [04-status-code.md](04-status-code.md).
 
 ## Poin Penting
 

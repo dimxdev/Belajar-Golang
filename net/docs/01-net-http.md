@@ -46,7 +46,7 @@ Ini yang kepake kalau Go-mu justru jadi "pemanggil" API lain, bukan cuma "penyed
 | `*http.Request` | data lengkap soal request yang masuk — method, header, body, URL, dll (parameter `r`) |
 | `http.HandleFunc(pattern, handler)` | daftarin function jadi "penjaga" buat path tertentu |
 | `http.Error(w, msg, code)` | shortcut kirim response error |
-| `http.StatusOK`, dll | konstanta kode status HTTP (lihat [status-code.md](status-code.md)) |
+| `http.StatusOK`, dll | konstanta kode status HTTP (lihat [04-status-code.md](04-status-code.md)) |
 
 ## Kenapa Go Standard Library-nya Sekomplit Ini?
 

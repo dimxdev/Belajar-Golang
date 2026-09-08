@@ -89,4 +89,4 @@ type Response struct {
 
 - Selalu cek `err != nil` setelah `Decode` — kalau diabaikan, request dengan body rusak/invalid tetap lanjut diproses dengan struct kosong (zero value), dan client bisa dapet response `200 OK` yang menyesatkan (seolah sukses padahal gagal).
 - `w.Header().Set(...)` dan `w.WriteHeader(...)` harus dipanggil **sebelum** `Encode`/`Write` — begitu body mulai ditulis, header & status code otomatis ter-"lock".
-- Status code yang umum dipakai di endpoint `POST`: `201` (berhasil buat data baru), `400` (body/format invalid), `422` (format valid tapi gagal validasi bisnis). Lihat daftar lengkap di [status-code.md](status-code.md).
+- Status code yang umum dipakai di endpoint `POST`: `201` (berhasil buat data baru), `400` (body/format invalid), `422` (format valid tapi gagal validasi bisnis). Lihat daftar lengkap di [04-status-code.md](04-status-code.md).

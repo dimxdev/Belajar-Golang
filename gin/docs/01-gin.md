@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-Gin adalah **framework HTTP** buat Go — bukan bagian dari standard library (jadi butuh `go get github.com/gin-gonic/gin` dulu). Gin **dibangun di atas** [`net/http`](../../net/docs/net-http.md), bukan pengganti totalnya — tugasnya "membungkus" hal-hal yang di `net/http` butuh ditulis manual berulang-ulang (set header, encode JSON, routing per-method, dll) jadi method-method siap pakai yang lebih ringkes.
+Gin adalah **framework HTTP** buat Go — bukan bagian dari standard library (jadi butuh `go get github.com/gin-gonic/gin` dulu). Gin **dibangun di atas** [`net/http`](../../net/docs/01-net-http.md), bukan pengganti totalnya — tugasnya "membungkus" hal-hal yang di `net/http` butuh ditulis manual berulang-ulang (set header, encode JSON, routing per-method, dll) jadi method-method siap pakai yang lebih ringkes.
 
 ## Kenapa Orang Pilih Gin Dibanding `net/http` Polos?
 
@@ -45,4 +45,4 @@ func main() {
 
 - Gin **tidak** menggantikan konsep-konsep dasar HTTP yang udah kamu pelajari di `net/http` — semua tetap sama (method, status code, header, JSON encode/decode). Gin cuma nyingkat cara nulisnya.
 - Karena itu, urutan belajar `net/http` dulu baru Gin itu **tepat** — kamu udah paham "apa yang sebenarnya terjadi" di balik tiap shortcut Gin.
-- Referensi lanjut: [get.md](get.md), [post.md](post.md), [gin-context.md](gin-context.md).
+- Referensi lanjut: [02-gin-context.md](02-gin-context.md), [03-get.md](03-get.md), [04-post.md](04-post.md).

@@ -51,7 +51,7 @@ c.JSON(200, gin.H{
 	"data":   user,
 })
 ```
-`gin.H` itu cuma alias dari `map[string]any` (alias dari `map[string]interface{}`) — dibikin biar nulisnya lebih pendek daripada `map[string]interface{}{...}` berulang-ulang. Fungsinya sama persis kayak bikin `Response` struct yang dibahas di [POST.md net/docs](../../net/docs/POST.md), tapi lebih cepat ditulis untuk kasus yang nggak butuh struct formal.
+`gin.H` itu cuma alias dari `map[string]any` (alias dari `map[string]interface{}`) — dibikin biar nulisnya lebih pendek daripada `map[string]interface{}{...}` berulang-ulang. Fungsinya sama persis kayak bikin `Response` struct yang dibahas di [post.md net/docs](../../net/docs/03-post.md), tapi lebih cepat ditulis untuk kasus yang nggak butuh struct formal.
 
 ## Contoh Pola Umum: Baca Body + Validasi + Response
 
@@ -72,10 +72,10 @@ func createUserHandler(c *gin.Context) {
 	c.JSON(201, gin.H{"status": "success", "data": user})
 }
 ```
-Pola ini identik dengan pola `Decode` + validasi berlapis yang dibahas di [post.md net/docs](../../net/docs/post.md), cuma versi Gin lebih ringkes.
+Pola ini identik dengan pola `Decode` + validasi berlapis yang dibahas di [post.md net/docs](../../net/docs/03-post.md), cuma versi Gin lebih ringkes.
 
 ## Poin Penting
 
 - `c.JSON(code, data)` itu melakukan **2 hal sekaligus**: set status code + tulis body response — biasanya jadi baris terakhir sebelum handler selesai.
 - `c.ShouldBindJSON` vs `c.Bind`: pakai `ShouldBindJSON` kalau mau kontrol sendiri response error-nya (lebih fleksibel, lebih umum dipakai).
-- Semua daftar status code (`200`, `201`, `400`, dst) yang dipakai di `c.JSON(code, ...)` sama persis dengan yang dibahas di [status-code.md net/docs](../../net/docs/status-code.md) — Gin tidak punya sistem status code sendiri, tetap pakai standar HTTP yang sama.
+- Semua daftar status code (`200`, `201`, `400`, dst) yang dipakai di `c.JSON(code, ...)` sama persis dengan yang dibahas di [status-code.md net/docs](../../net/docs/04-status-code.md) — Gin tidak punya sistem status code sendiri, tetap pakai standar HTTP yang sama.

@@ -84,6 +84,57 @@ barangs := []Barang{
 ```
 Pola slice-of-struct ini yang paling sering dipakai buat representasi "list data" — hasil query database, atau response API berbentuk array of object.
 
+## Slice sebagai Tipe Field di Struct
+
+Slice juga bisa jadi **tipe field** di dalam struct — dipakai kalau satu field itu perlu nampung **banyak nilai sekaligus**, bukan cuma 1 nilai tunggal.
+
+```go
+type Config struct {
+	AllowOrigins []string // field ini nampung banyak domain sekaligus
+	AllowMethods []string // field ini nampung banyak method sekaligus
+	AllowHeaders []string
+}
+```
+
+Cara isinya, gabungan struct literal + slice literal:
+```go
+config := Config{
+	AllowOrigins: []string{"http://localhost:3000"},                 // 1 elemen
+	AllowMethods: []string{"GET", "POST", "PUT", "DELETE"},           // 4 elemen
+	AllowHeaders: []string{"Content-Type", "Authorization"},
+}
+```
+
+Kenapa dipilih `[]string` (slice), bukan `string` tunggal? Karena secara logika, nilainya **bisa lebih dari 1** — misal domain yang diizinkan bisa banyak, method HTTP yang diizinkan juga bisa banyak. Kalau dipaksa pakai `string` tunggal, field itu cuma bisa nampung 1 nilai doang, nggak fleksibel.
+
+Field struct juga bisa diisi slice of struct, kalau butuh nampung banyak data yang lebih kompleks dari sekadar string/int:
+```go
+type Toko struct {
+	Nama    string
+	Produk  []Barang // slice of struct, lihat definisi Barang di atas
+}
+
+toko := Toko{
+	Nama: "Toko Budi",
+	Produk: []Barang{
+		{Name: "Keyboard", Harga: 100000},
+		{Name: "Laptop", Harga: 1000000},
+	},
+}
+```
+
+Ini juga berlaku buat tipe data lain, bukan cuma slice — field struct bisa diisi tipe **apapun** yang valid di Go: `map`, struct lain (nested), pointer, bahkan `func` atau `chan`:
+```go
+type Server struct {
+	Nama    string            // tipe dasar
+	Domains []string          // slice
+	Headers map[string]string // map
+	Alamat  Alamat            // struct lain (nested)
+	Owner   *User             // pointer
+}
+```
+Aturan generalnya: tipe field struct itu bebas, tinggal disesuaikan sama bentuk data yang mau ditampung — bukan cuma terbatas ke `string`/`int`/`bool`.
+
 ## Poin Penting
 
 - `append` bisa mengubah slice asli **atau** bikin array baru di belakang layar (tergantung kapasitas) — selalu tampung hasilnya ke variabel.

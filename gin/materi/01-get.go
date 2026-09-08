@@ -7,6 +7,13 @@ type Profile struct {
 	Age  int    `json:"age"`
 }
 
+// ProfileHandler godoc
+// @Summary Ambil data profile
+// @Description Menampilkan data profil user (masih hardcode)
+// @Tags profile
+// @Produce json
+// @Success 200 {object} Profile
+// @Router /profile [get] 
 func ProfilHandler(c *gin.Context) {
 	data := Profile{
 		Name: "Dimas",
