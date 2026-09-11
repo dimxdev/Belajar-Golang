@@ -28,7 +28,7 @@ func main() {
 		AllowMethods: []string{"GET", "POST", "PUT", "DELETE"},
 		AllowHeaders: []string{"Content-Type", "Authorization"},
 		AllowCredentials: true,
-	}))
+	})) 
 	router.Use(materi.MyLogger()) //pakai middleware di semua route
 
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
